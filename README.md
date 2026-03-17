@@ -71,6 +71,18 @@ copy .env.example .env
 python main.py
 ```
 
+## Docker Deployment
+
+This bot can run as a separate background container next to your existing Dockerized Python service.
+
+Quick start:
+
+```bash
+docker compose -f docker-compose.bot.yml up -d --build
+```
+
+Full notes: [DEPLOYMENT.md](/c:/Users/azsar/Desktop/bist-ai-bot-tg/DEPLOYMENT.md)
+
 ## Environment Variables
 
 Minimum required:

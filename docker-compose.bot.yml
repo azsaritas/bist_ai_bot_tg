@@ -1,0 +1,9 @@
+services:
+  bist-ai-bot:
+    build: .
+    container_name: bist-ai-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
