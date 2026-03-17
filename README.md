@@ -4,7 +4,6 @@
 
 `BIST AI Telegram Bot`, Borsa Istanbul hisseleri icin Telegram uzerinden veri ozeti, KAP akisi ve yapay zeka destekli sirket yorumu sunan acik kaynakli bir uygulamadir.
 
-Bu repo, Pollinations `tier app submission` beklentilerine yaklasmak icin uygulama amaci, Pollinations kullanim sekli, calistirma adimlari ve submission metadata alanlari acik olacak sekilde duzenlenmistir.
 
 ## App Summary
 
@@ -86,30 +85,6 @@ OTHER_CONTACT=
 ```
 
 Opsiyonel TradingView alanlari tanimlanirsa fiyat akisi daha guncel hale getirilebilir.
-
-## Project Structure
-
-- [main.py](c:\Users\azsar\Desktop\borsa-telegram-botu\main.py)
-- [bist_bot/config.py](c:\Users\azsar\Desktop\borsa-telegram-botu\bist_bot\config.py)
-- [bist_bot/bot.py](c:\Users\azsar\Desktop\borsa-telegram-botu\bist_bot\bot.py)
-- [bist_bot/telegram_api.py](c:\Users\azsar\Desktop\borsa-telegram-botu\bist_bot\telegram_api.py)
-- [bist_bot/stock_service.py](c:\Users\azsar\Desktop\borsa-telegram-botu\bist_bot\stock_service.py)
-- [bist_bot/ai_service.py](c:\Users\azsar\Desktop\borsa-telegram-botu\bist_bot\ai_service.py)
-- [docs/POLLINATIONS_SUBMISSION.md](c:\Users\azsar\Desktop\borsa-telegram-botu\docs\POLLINATIONS_SUBMISSION.md)
-
-## Submission Notes
-
-Pollinations issue template icin doldurulabilir ozet [docs/POLLINATIONS_SUBMISSION.md](c:\Users\azsar\Desktop\borsa-telegram-botu\docs\POLLINATIONS_SUBMISSION.md) dosyasina eklendi. Bu dosya:
-
-- App Name
-- App Description
-- App URL
-- GitHub Open Source Repository URL
-- Discord Username
-- App Language
-- Email / Other Contact
-
-alanlarini tek yerde toplar.
 
 ## Sources
 
