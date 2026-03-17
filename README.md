@@ -2,33 +2,31 @@
 
 [![Built with Pollinations](https://img.shields.io/badge/Built%20with-Pollinations-8a2be2?style=for-the-badge)](https://pollinations.ai)
 
-`BIST AI Telegram Bot`, Borsa Istanbul hisseleri icin Telegram uzerinden veri ozeti, KAP akisi ve yapay zeka destekli sirket yorumu sunan acik kaynakli bir uygulamadir.
+Open-source Telegram bot for Borsa Istanbul stock analysis with Pollinations-powered AI commentary.
 
+Turkish version: [README.tr.md](/c:/Users/azsar/Desktop/bist-ai-bot-tg/README.tr.md)
 
 ## App Summary
 
 - App name: `BIST AI Telegram Bot`
 - App type: Telegram utility / finance assistant
-- Main user value: BIST hisseleri icin veri toplama + yorumlama + KAP ozeti
-- Pollinations usage: `gemini-fast` text modeli ile yatirim tavsiyesi icermeyen Turkce yorum
-- External app URL: `https://t.me/<bot_username>` formatinda kullanilabilir
-- Open-source repo: bu repository
-
-## Why This Fits Pollinations Better
-
-Bu uygulama yalnizca "prompt gir, cevap al" tipinde ince bir sarmal degildir. Kullanicidan hisse kodu veya sirket adi alir, `borsapy` ile gercek veri toplar, finansal tablo ozetleri cikarir, son KAP bildirimlerini birlestirir ve bunlari Pollinations modeline anlamli bir baglam olarak verip kullaniciya duzenlenmis bir sirket yorumu sunar.
+- Main user value: BIST stock data, company summary, KAP flow, and AI commentary in one place
+- Pollinations usage: text commentary generated through Pollinations models such as `gemini-fast`, `claude-airforce`, `openai-fast`, `perplexity-fast`, and `step-3.5-flash`
+- External app URL: can be exposed as `https://t.me/<bot_username>`
+- Open-source repo: this repository
 
 ## Features
 
-- Hisse kodu veya sirket adiyla sorgu
-- Ilk acilista Turkce / English dil secimi
-- Son fiyat, gunluk degisim, hacim, 52 hafta bandi ve temel carpanlar
-- Finansal tablo ozeti
-- Son KAP bildirimleri ve yaklasan finansal takvim
-- Pollinations `gemini-fast` ile AI yorum
-- `/aimodel` ile `gemini-fast`, `claude-airforce`, `openai-fast`, `perplexity-fast`, `step-3.5-flash` secimi
-- Pollinations API yoksa fallback veri odakli yorum
-- `/about` komutuyla app metadata gosterimi
+- Search by stock ticker or company name
+- First-run language selection with Turkish and English support
+- Per-chat AI model selection with `/aimodel`
+- Price summary, daily move, volume, valuation ratios, and 52-week range
+- Basic fundamental-analysis context beyond raw technical data
+- Financial statement summary
+- Recent KAP disclosures and upcoming reporting calendar
+- Pollinations-powered AI commentary
+- Fallback commentary when Pollinations API is unavailable
+- `/about` command for app metadata and submission-friendly details
 
 ## Commands
 
@@ -38,18 +36,30 @@ Bu uygulama yalnizca "prompt gir, cevap al" tipinde ince bir sarmal degildir. Ku
 - `/aimodel`
 - `/about`
 - `/pollinations`
+- `/search bank`
 - `/ara banka`
+- `/stock THYAO`
 - `/hisse THYAO`
 - `THYAO`
 - `Turk Hava Yollari`
+
+## Supported Pollinations Models
+
+Users can choose the active text model with `/aimodel`.
+
+- `gemini-fast`
+- `claude-airforce`
+- `openai-fast`
+- `perplexity-fast`
+- `step-3.5-flash`
 
 ## Pollinations Integration
 
 - Provider: [pollinations.ai](https://pollinations.ai)
 - Docs: https://enter.pollinations.ai/api/docs
 - LLM summary: https://enter.pollinations.ai/api/docs/llm.txt
-- Model: `gemini-fast`
 - API style: OpenAI-compatible `/v1/chat/completions`
+- Default model: `gemini-fast`
 
 ## Local Setup
 
@@ -63,7 +73,7 @@ python main.py
 
 ## Environment Variables
 
-Minimum gerekli alanlar:
+Minimum required:
 
 ```env
 TELEGRAM_BOT_TOKEN=...
@@ -73,18 +83,8 @@ POLLINATIONS_MODEL=gemini-fast
 POLLINATIONS_BASE_URL=https://gen.pollinations.ai/v1
 ```
 
-Submission-ready metadata alanlari:
+Optional TradingView credentials can be configured for fresher pricing data.
 
-```env
-APP_NAME=BIST AI Telegram Bot
-APP_PUBLIC_URL=https://t.me/<bot_username>
-GITHUB_REPO_URL=https://github.com/<username>/<repo>
-APP_LANGUAGE=tr
-DISCORD_CONTACT=
-OTHER_CONTACT=
-```
-
-Opsiyonel TradingView alanlari tanimlanirsa fiyat akisi daha guncel hale getirilebilir.
 
 ## Sources
 
